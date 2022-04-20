@@ -1,9 +1,9 @@
-import { ARRAY, STRING } from "../utils/schemaTypes";
+import { ARRAY, DOCUMENT, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "FOOTER",
   name: "footer",
-  type: "document",
+  type: DOCUMENT,
   fields: [
     {
       name: "footerName",

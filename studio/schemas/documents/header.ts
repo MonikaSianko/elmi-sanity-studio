@@ -1,9 +1,9 @@
-import { ARRAY, STRING } from "../utils/schemaTypes";
+import { ARRAY, DOCUMENT, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "HEADER",
   name: "header",
-  type: "document",
+  type: DOCUMENT,
   fields: [
     {
       name: "headerName",

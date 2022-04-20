@@ -5,12 +5,12 @@ import {
   HOME_PAGE_TITLE,
 } from "../../../deskStructure/constants";
 import { homeSectionTypes } from "../../helpers/sectionTypes";
-import { ARRAY } from "../../utils/schemaTypes";
+import { ARRAY, DOCUMENT } from "../../utils/schemaTypes";
 
 export default {
   title: HOME_PAGE_TITLE,
   name: HOME_PAGE,
-  type: "document",
+  type: DOCUMENT,
   fields: [
     {
       title: "Page sections",

@@ -3,12 +3,12 @@ import {
   DESCRIPTION_TITLE,
 } from "../../../deskStructure/constants";
 import { i18n } from "../../helpers/documentTranslation";
-import { ARRAY, STRING } from "../../utils/schemaTypes";
+import { ARRAY, DOCUMENT, STRING } from "../../utils/schemaTypes";
 
 export default {
   title: DESCRIPTION_TITLE,
   name: DESCRIPTION,
-  type: "document",
+  type: DOCUMENT,
   i18n,
   fields: [
     {

@@ -1,11 +1,11 @@
 import { HERO, HERO_TITLE } from "../../../deskStructure/constants";
 import { i18n } from "../../helpers/documentTranslation";
-import { ARRAY, STRING } from "../../utils/schemaTypes";
+import { ARRAY, DOCUMENT, STRING } from "../../utils/schemaTypes";
 
 export default {
   title: HERO_TITLE,
   name: HERO,
-  type: "document",
+  type: DOCUMENT,
   i18n,
   fields: [
     {

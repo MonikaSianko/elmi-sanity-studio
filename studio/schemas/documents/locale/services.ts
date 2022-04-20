@@ -1,10 +1,10 @@
 import { SERVICES, SERVICES_TITLE } from "../../../deskStructure/constants";
-import { ARRAY } from "../../utils/schemaTypes";
+import { ARRAY, DOCUMENT } from "../../utils/schemaTypes";
 
 export default {
   title: SERVICES_TITLE,
   name: SERVICES,
-  type: "document",
+  type: DOCUMENT,
   fields: [
     { title: "Description", name: "description", type: "simpleDescription" },
     {

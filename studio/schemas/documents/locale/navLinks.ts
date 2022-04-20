@@ -1,11 +1,11 @@
 import { NAVLINKS, NAVLINKS_TITLE } from "../../../deskStructure/constants";
 import { i18n } from "../../helpers/documentTranslation";
-import { STRING } from "../../utils/schemaTypes";
+import { DOCUMENT, STRING } from "../../utils/schemaTypes";
 
 export default {
   title: NAVLINKS_TITLE,
   name: NAVLINKS,
-  type: "document",
+  type: DOCUMENT,
   i18n,
   fields: [
     {

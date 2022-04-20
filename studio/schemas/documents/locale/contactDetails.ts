@@ -3,12 +3,12 @@ import {
   CONTACT_DETAILS,
   CONTACT_DETAILS_TITLE,
 } from "../../../deskStructure/constants";
-import { ARRAY, STRING } from "../../utils/schemaTypes";
+import { ARRAY, DOCUMENT, STRING } from "../../utils/schemaTypes";
 
 export default {
   title: CONTACT_DETAILS_TITLE,
   name: CONTACT_DETAILS,
-  type: "document",
+  type: DOCUMENT,
   i18n,
   fields: [
     {

@@ -1,11 +1,11 @@
 import { TEAM, TEAM_TITLE } from "../../../deskStructure/constants";
 import { i18n } from "../../helpers/documentTranslation";
-import { STRING } from "../../utils/schemaTypes";
+import { DOCUMENT, STRING } from "../../utils/schemaTypes";
 
 export default {
   title: TEAM_TITLE,
   name: TEAM,
-  type: "document",
+  type: DOCUMENT,
   i18n,
   fields: [
     {

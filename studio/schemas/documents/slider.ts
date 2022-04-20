@@ -1,10 +1,10 @@
 import { SLIDER_TITLE, SLIDER } from "../../deskStructure/constants";
-import { ARRAY, STRING } from "../utils/schemaTypes";
+import { ARRAY, DOCUMENT, STRING } from "../utils/schemaTypes";
 
 export default {
   title: SLIDER_TITLE,
   name: SLIDER,
-  type: "document",
+  type: DOCUMENT,
   fields: [
     {
       name: "sliderName",

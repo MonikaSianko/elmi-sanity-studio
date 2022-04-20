@@ -1,12 +1,12 @@
 import { i18n } from "../../helpers/documentTranslation";
 import { PRODUCTS, PRODUCTS_TITLE } from "../../../deskStructure/constants";
 import { productsTypes } from "../../helpers/lists";
-import { STRING } from "../../utils/schemaTypes";
+import { DOCUMENT, STRING } from "../../utils/schemaTypes";
 
 export default {
   title: PRODUCTS_TITLE,
   name: PRODUCTS,
-  type: "document",
+  type: DOCUMENT,
   i18n,
   fields: [
     {
