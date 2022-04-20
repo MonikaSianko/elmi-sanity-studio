@@ -1,3 +1,5 @@
+import { STRING } from "../utils/schemaTypes";
+
 export default {
   title: "Image",
   name: "captionImage",
@@ -6,7 +8,7 @@ export default {
   fields: [
     {
       name: "caption",
-      type: "string",
+      type: STRING,
       title: "Caption",
       description:
         "Short description of the image that will be shown if the image does not load.",

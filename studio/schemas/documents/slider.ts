@@ -1,4 +1,5 @@
 import { SLIDER_TITLE, SLIDER } from "../../deskStructure/constants";
+import { STRING } from "../utils/schemaTypes";
 
 export default {
   title: SLIDER_TITLE,
@@ -8,7 +9,7 @@ export default {
     {
       name: "sliderName",
       title: "Slider Name",
-      type: "string",
+      type: STRING,
       description:
         "This field serves organizational purpose, this value will not be displayed on the website.",
     },

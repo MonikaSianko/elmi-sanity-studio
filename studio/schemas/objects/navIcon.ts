@@ -1,3 +1,5 @@
+import { STRING } from "../utils/schemaTypes";
+
 export default {
   title: "Navigation button",
   name: "navButton",
@@ -5,7 +7,7 @@ export default {
     {
       title: "Path",
       name: "path",
-      type: "string",
+      type: STRING,
     },
     {
       title: "Icon",

@@ -1,3 +1,5 @@
+import { STRING } from "../utils/schemaTypes";
+
 export default {
   title: "Person",
   name: "person",
@@ -6,17 +8,17 @@ export default {
   fields: [
     {
       title: "Name",
-      type: "string",
+      type: STRING,
       name: "name",
     },
     {
       title: "Surname",
-      type: "string",
+      type: STRING,
       name: "surname",
     },
     {
       title: "Position",
-      type: "string",
+      type: STRING,
       name: "position",
     },
     {

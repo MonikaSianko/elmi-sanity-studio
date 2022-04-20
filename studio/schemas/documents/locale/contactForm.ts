@@ -11,10 +11,10 @@ export default {
   i18n,
   fields: [
     {
-      title: "Validation messages",
-      name: "errors",
+      title: "Inputs",
+      name: "inputs",
       type: "array",
-      of: [{ type: "error" }],
+      of: [{ type: "formInput" }],
     },
   ],
 };

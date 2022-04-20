@@ -1,6 +1,7 @@
 import { i18n } from "../../helpers/documentTranslation";
 import { PRODUCTS, PRODUCTS_TITLE } from "../../../deskStructure/constants";
 import { productsTypes } from "../../helpers/lists";
+import { STRING } from "../../utils/schemaTypes";
 
 export default {
   title: PRODUCTS_TITLE,
@@ -11,14 +12,14 @@ export default {
     {
       name: "desciptionName",
       title: "Description Name",
-      type: "string",
+      type: STRING,
       description:
         "This field serves organizational purpose, this value will not be displayed on the website.",
     },
     {
       name: "type",
       title: "Type",
-      type: "string",
+      type: STRING,
       options: {
         list: productsTypes.map((type) => ({ value: type, title: type })),
       },

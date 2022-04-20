@@ -1,3 +1,5 @@
+import { STRING } from "../utils/schemaTypes";
+
 export default {
   title: "FOOTER",
   name: "footer",
@@ -6,7 +8,7 @@ export default {
     {
       name: "footerName",
       title: "Footer Name",
-      type: "string",
+      type: STRING,
       description:
         "This field serves organizational purpose, this value will not be displayed on the website.",
     },

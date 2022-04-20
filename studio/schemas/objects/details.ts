@@ -1,3 +1,5 @@
+import { STRING } from "../utils/schemaTypes";
+
 export default {
   title: "Details",
   name: "details",
@@ -6,7 +8,7 @@ export default {
     {
       title: "Text",
       name: "text",
-      type: "string",
+      type: STRING,
     },
     {
       title: "Icon",

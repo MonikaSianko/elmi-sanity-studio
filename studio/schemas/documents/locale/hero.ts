@@ -1,5 +1,6 @@
 import { HERO, HERO_TITLE } from "../../../deskStructure/constants";
 import { i18n } from "../../helpers/documentTranslation";
+import { STRING } from "../../utils/schemaTypes";
 
 export default {
   title: HERO_TITLE,
@@ -10,18 +11,18 @@ export default {
     {
       name: "heroName",
       title: "Hero Name",
-      type: "string",
+      type: STRING,
       description:
         "This field serves organizational purpose, this value will not be displayed on the website.",
     },
     {
       title: "Title",
-      type: "string",
+      type: STRING,
       name: "title",
     },
     {
       title: "Subtitle",
-      type: "string",
+      type: STRING,
       name: "subtitle",
     },
     {

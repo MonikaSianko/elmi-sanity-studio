@@ -3,6 +3,7 @@ import {
   CONTACT_DETAILS,
   CONTACT_DETAILS_TITLE,
 } from "../../../deskStructure/constants";
+import { STRING } from "../../utils/schemaTypes";
 
 export default {
   title: CONTACT_DETAILS_TITLE,
@@ -10,6 +11,13 @@ export default {
   type: "document",
   i18n,
   fields: [
+    {
+      name: "contactDetailsName",
+      title: "Contact details name",
+      type: STRING,
+      description:
+        "This field serves organizational purpose, this value will not be displayed on the website.",
+    },
     {
       title: "Description",
       name: "description",
@@ -20,6 +28,16 @@ export default {
       name: "contactBy",
       type: "array",
       of: [{ type: "link" }],
+    },
+    {
+      title: "Longtitute",
+      name: "lng",
+      type: STRING,
+    },
+    {
+      title: "Latitute",
+      name: "lat",
+      type: STRING,
     },
   ],
 };

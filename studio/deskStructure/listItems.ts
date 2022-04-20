@@ -24,6 +24,10 @@ import {
   DESCRIPTION_TITLE,
   CONTACT_FORM_TITLE,
   CONTACT_FORM,
+  HEADER_TITLE,
+  FOOTER_TITLE,
+  HOME_PAGE_TITLE,
+  HOME_PAGE,
 } from "./constants";
 
 const createListItem = (title: string, id: string): ListItemBuilder => {
@@ -43,6 +47,10 @@ const createListItem = (title: string, id: string): ListItemBuilder => {
           return params.type === id;
         })
     );
+};
+
+const createDocTypeListItem = (title: string, id: string): ListItemBuilder => {
+  return S.documentTypeListItem(id).id(id).title(title);
 };
 
 export const heroEditorItem = createListItem(HERO_TITLE, HERO);
@@ -67,10 +75,8 @@ export const contactFormListItem = createListItem(
 
 // REFERANCE_BOXES
 
-export const headerListItem = S.documentTypeListItem(HEADER)
-  .id(HEADER)
-  .title(HEADER.toUpperCase());
+export const headerListItem = createDocTypeListItem(HEADER_TITLE, HEADER);
+export const footerListItem = createDocTypeListItem(FOOTER_TITLE, FOOTER);
 
-export const footerListItem = S.documentTypeListItem(FOOTER)
-  .id(FOOTER)
-  .title(FOOTER.toUpperCase());
+// PAGES
+export const homePageListItem = createListItem(HOME_PAGE_TITLE, HOME_PAGE);

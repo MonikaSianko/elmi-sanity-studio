@@ -1,3 +1,5 @@
+import { STRING } from "../utils/schemaTypes";
+
 export default {
   title: "CTA",
   name: "cta",
@@ -5,12 +7,12 @@ export default {
   fields: [
     {
       title: "Text",
-      type: "string",
+      type: STRING,
       name: "text",
     },
     {
       title: "Path",
-      type: "string",
+      type: STRING,
       name: "path",
     },
     {

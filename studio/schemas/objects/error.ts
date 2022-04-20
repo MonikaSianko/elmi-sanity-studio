@@ -1,4 +1,5 @@
 import { errorTypes } from "../helpers/lists";
+import { STRING } from "../utils/schemaTypes";
 
 export default {
   title: "Error",
@@ -6,17 +7,17 @@ export default {
   type: "object",
   fields: [
     {
-      title: "Text",
-      name: "text",
-      type: "string",
+      title: "Error type",
+      name: "errorType",
+      type: STRING,
+      options: {
+        list: errorTypes.map((type) => ({ value: type, title: type })),
+      },
     },
-    // {
-    //   title: "error type",
-    //   name: "errorType",
-    //   type: "string",
-    //   options: {
-    //     list: errorTypes.map((type) => ({ value: type, title: type })),
-    //   },
-    // },
+    {
+      title: "Error message",
+      name: "errorMessage",
+      type: STRING,
+    },
   ],
 };

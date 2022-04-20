@@ -1,5 +1,6 @@
 import { NAVCARD, NAVCARD_TITLE } from "../../../deskStructure/constants";
 import { i18n } from "../../helpers/documentTranslation";
+import { STRING } from "../../utils/schemaTypes";
 
 export default {
   title: NAVCARD_TITLE,
@@ -10,19 +11,19 @@ export default {
     {
       name: "navCardName",
       title: "Navigation Card Name",
-      type: "string",
+      type: STRING,
       description:
         "This field serves organizational purpose, this value will not be displayed on the website.",
     },
     {
       title: "Path",
-      type: "string",
+      type: STRING,
       name: "path",
     },
     {
       title: "Button text",
       name: "buttonText",
-      type: "string",
+      type: STRING,
       description: "Can be left empty. If only icon should be displayed.",
     },
     {

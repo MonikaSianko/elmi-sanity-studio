@@ -25,6 +25,9 @@ import contactForm from "./documents/locale/contactForm";
 import slider from "./documents/slider";
 import footer from "./documents/footer";
 import header from "./documents/header";
+import validationSettings from "./objects/validationSettings";
+import formInput from "./objects/formInput";
+import homePage from "./documents/pages/homePage";
 
 export default createSchema({
   name: "default",
@@ -57,6 +60,11 @@ export default createSchema({
     simpleDescription,
     details,
     error,
+    formInput,
+    validationSettings,
+
+    //pages
+    homePage,
   ]),
   // Include documents with field translation support.
   // This changes their structure, transforming

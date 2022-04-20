@@ -7,8 +7,8 @@ interface ILanguages {
 }
 
 export const languages: ILanguages[] = [
-  { name: "pl", title: "Polish" },
   { name: "en", title: "English" },
+  { name: "pl", title: "Polish" },
   { name: "es", title: "Spanish" },
 ];
 

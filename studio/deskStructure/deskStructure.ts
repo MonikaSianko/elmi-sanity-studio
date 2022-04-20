@@ -20,6 +20,7 @@ import {
   SERVICES,
   CONTACT_DETAILS,
   CONTACT_FORM,
+  HOME_PAGE,
 } from "./constants";
 import {
   heroEditorItem,
@@ -34,6 +35,7 @@ import {
   servicesListItem,
   contactDetailsListItem,
   contactFormListItem,
+  homePageListItem,
 } from "./listItems";
 
 const schemaDocumentTranslation = [
@@ -65,6 +67,8 @@ const boxes = [
   { id: CONTACT_FORM, item: contactFormListItem },
 ];
 
+const pages = [{ id: HOME_PAGE, item: homePageListItem }];
+
 const propsSchemaType = (schemaType: string[], propsSchemaType): boolean => {
   return schemaType.includes(propsSchemaType);
 };
@@ -95,6 +99,7 @@ const sortedItems = (arr: IItems[]): ListItemBuilder[] => {
 };
 
 const boxesSorted = sortedItems(boxes);
+const pagesSorted = sortedItems(pages);
 
 export default () =>
   S.list()
@@ -104,4 +109,8 @@ export default () =>
         .title("Boxes")
         .icon(DocumentIcon)
         .child(S.list().id("allBoxes").title("All boxes").items(boxesSorted)),
+      S.listItem()
+        .title("Pages")
+        .icon(DocumentIcon)
+        .child(S.list().id("allPages").title("All pages").items(pagesSorted)),
     ]);

@@ -1,3 +1,5 @@
+import { STRING } from "../utils/schemaTypes";
+
 export default {
   title: "Slide",
   name: "slide",
@@ -6,7 +8,7 @@ export default {
     {
       title: "Title",
       name: "title",
-      type: "string",
+      type: STRING,
       desciption: "If left empty, slide will consist only of image",
     },
     {
