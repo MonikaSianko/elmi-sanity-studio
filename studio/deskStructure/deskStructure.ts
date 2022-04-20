@@ -1,7 +1,6 @@
 import { ListItemBuilder } from "@sanity/structure/dist/dts/ListItem";
 import S from "@sanity/desk-tool/structure-builder";
 import * as I18nS from "sanity-plugin-intl-input/lib/structure";
-// import { i18n } from "./schemas/documentTranslation";
 
 import {
   GrDocumentText as FieldIcon,
@@ -16,6 +15,11 @@ import {
   TEAM,
   HEADER,
   SLIDER,
+  PRODUCTS,
+  NAVCARD,
+  SERVICES,
+  CONTACT_DETAILS,
+  CONTACT_FORM,
 } from "./constants";
 import {
   heroEditorItem,
@@ -25,6 +29,11 @@ import {
   footerListItem,
   sliderListItem,
   teammMembersListItem,
+  productsListItem,
+  navCardListItem,
+  servicesListItem,
+  contactDetailsListItem,
+  contactFormListItem,
 } from "./listItems";
 
 const schemaDocumentTranslation = [
@@ -34,6 +43,26 @@ const schemaDocumentTranslation = [
   TEAM,
   NAVLINKS,
   SLIDER,
+  PRODUCTS,
+  NAVCARD,
+  SERVICES,
+  CONTACT_DETAILS,
+  CONTACT_FORM,
+];
+
+const boxes = [
+  { id: HERO, item: heroEditorItem },
+  { id: DESCRIPTION, item: descriptionListItem },
+  { id: NAVLINKS, item: navLinksListItem },
+  { id: HEADER, item: headerListItem },
+  { id: FOOTER, item: footerListItem },
+  { id: SLIDER, item: sliderListItem },
+  { id: TEAM, item: teammMembersListItem },
+  { id: PRODUCTS, item: productsListItem },
+  { id: NAVCARD, item: navCardListItem },
+  { id: SERVICES, item: servicesListItem },
+  { id: CONTACT_DETAILS, item: contactDetailsListItem },
+  { id: CONTACT_FORM, item: contactFormListItem },
 ];
 
 const propsSchemaType = (schemaType: string[], propsSchemaType): boolean => {
@@ -58,15 +87,6 @@ interface IItems {
   item: ListItemBuilder;
 }
 
-const boxes = [
-  { id: HERO, item: heroEditorItem },
-  { id: DESCRIPTION, item: descriptionListItem },
-  { id: NAVLINKS, item: navLinksListItem },
-  { id: HEADER, item: headerListItem },
-  { id: FOOTER, item: footerListItem },
-  { id: SLIDER, item: sliderListItem },
-  { id: TEAM, item: teammMembersListItem },
-];
 /// FIX THE SORTING
 // const boxesSorted = boxes.sort((a, b) => a.spec.id.localeCompare(b.spec.id);
 const sortedItems = (arr: IItems[]): ListItemBuilder[] => {

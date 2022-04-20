@@ -1,5 +1,6 @@
+import { ListItemBuilder } from "@sanity/structure/dist/dts/ListItem";
 import S from "@sanity/desk-tool/structure-builder";
-import { i18n } from "../schemas/documentTranslation";
+import { i18n } from "../schemas/helpers/documentTranslation";
 import {
   HERO,
   DESCRIPTION,
@@ -11,96 +12,58 @@ import {
   SLIDER_TITLE,
   TEAM,
   TEAM_TITLE,
+  PRODUCTS_TITLE,
+  PRODUCTS,
+  NAVCARD_TITLE,
+  NAVCARD,
+  SERVICES_TITLE,
+  SERVICES,
+  CONTACT_DETAILS_TITLE,
+  CONTACT_DETAILS,
+  HERO_TITLE,
+  DESCRIPTION_TITLE,
+  CONTACT_FORM_TITLE,
+  CONTACT_FORM,
 } from "./constants";
 
-export const heroEditorItem = S.listItem()
-  .title(HERO.toUpperCase())
-  .id(HERO)
-  .schemaType(HERO)
-  .child(
-    S.documentList()
-      .id(HERO)
-      .title(HERO.toUpperCase())
-      // Use a GROQ filter to get documents.
-      .filter(`_type == "${HERO}" && (!defined(_lang) || _lang == $baseLang)`)
-      .params({ baseLang: i18n.base })
-      .canHandleIntent((_name, params, _context) => {
-        // Assume we can handle all intents (actions) regarding post documents
-        return params.type === HERO;
-      })
-  );
+const createListItem = (title: string, id: string): ListItemBuilder => {
+  return S.listItem()
+    .title(title)
+    .id(id)
+    .schemaType(id)
+    .child(
+      S.documentList()
+        .id(id)
+        .title(id)
+        // Use a GROQ filter to get documents.
+        .filter(`_type == "${id}" && (!defined(_lang) || _lang == $baseLang)`)
+        .params({ baseLang: i18n.base })
+        .canHandleIntent((_name, params, _context) => {
+          // Assume we can handle all intents (actions) regarding post documents
+          return params.type === id;
+        })
+    );
+};
 
-export const descriptionListItem = S.listItem()
-  .title(DESCRIPTION.toUpperCase())
-  .id(DESCRIPTION)
-  .schemaType(DESCRIPTION)
-  .child(
-    S.documentList()
-      .id(DESCRIPTION)
-      .title(DESCRIPTION.toUpperCase())
-      // Use a GROQ filter to get documents.
-      .filter(
-        `_type == "${DESCRIPTION}" && (!defined(_lang) || _lang == $baseLang)`
-      )
-      .params({ baseLang: i18n.base })
-      .canHandleIntent((_name, params, _context) => {
-        // Assume we can handle all intents (actions) regarding post documents
-        return params.type === DESCRIPTION;
-      })
-  );
-
-export const teammMembersListItem = S.listItem()
-  .title(TEAM_TITLE)
-  .id(TEAM)
-  .schemaType(TEAM)
-  .child(
-    S.documentList()
-      .id(TEAM)
-      .title(TEAM_TITLE)
-      // Use a GROQ filter to get documents.
-      .filter(`_type == "${TEAM}" && (!defined(_lang) || _lang == $baseLang)`)
-      .params({ baseLang: i18n.base })
-      .canHandleIntent((_name, params, _context) => {
-        // Assume we can handle all intents (actions) regarding post documents
-        return params.type === TEAM;
-      })
-  );
-
-export const navLinksListItem = S.listItem()
-  .title(NAVLINKS_TITLE)
-  .id(NAVLINKS)
-  .schemaType(NAVLINKS)
-  .child(
-    S.documentList()
-      .id(NAVLINKS)
-      .title(NAVLINKS_TITLE)
-      // Use a GROQ filter to get documents.
-      .filter(
-        `_type == "${NAVLINKS}" && (!defined(_lang) || _lang == $baseLang)`
-      )
-      .params({ baseLang: i18n.base })
-      .canHandleIntent((_name, params, _context) => {
-        // Assume we can handle all intents (actions) regarding post documents
-        return params.type === NAVLINKS;
-      })
-  );
-
-export const sliderListItem = S.listItem()
-  .title(SLIDER_TITLE)
-  .id(SLIDER)
-  .schemaType(SLIDER)
-  .child(
-    S.documentList()
-      .id(SLIDER)
-      .title(SLIDER_TITLE)
-      // Use a GROQ filter to get documents.
-      .filter(`_type == "${SLIDER}" && (!defined(_lang) || _lang == $baseLang)`)
-      .params({ baseLang: i18n.base })
-      .canHandleIntent((_name, params, _context) => {
-        // Assume we can handle all intents (actions) regarding post documents
-        return params.type === SLIDER;
-      })
-  );
+export const heroEditorItem = createListItem(HERO_TITLE, HERO);
+export const descriptionListItem = createListItem(
+  DESCRIPTION_TITLE,
+  DESCRIPTION
+);
+export const teammMembersListItem = createListItem(TEAM_TITLE, TEAM);
+export const navLinksListItem = createListItem(NAVLINKS_TITLE, NAVLINKS);
+export const sliderListItem = createListItem(SLIDER_TITLE, SLIDER);
+export const productsListItem = createListItem(PRODUCTS_TITLE, PRODUCTS);
+export const navCardListItem = createListItem(NAVCARD_TITLE, NAVCARD);
+export const servicesListItem = createListItem(SERVICES_TITLE, SERVICES);
+export const contactDetailsListItem = createListItem(
+  CONTACT_DETAILS_TITLE,
+  CONTACT_DETAILS
+);
+export const contactFormListItem = createListItem(
+  CONTACT_FORM_TITLE,
+  CONTACT_FORM
+);
 
 // REFERANCE_BOXES
 

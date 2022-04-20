@@ -1,5 +1,5 @@
-import { TEAM, TEAM_TITLE } from "../../deskStructure/constants";
-import { i18n } from "../documentTranslation";
+import { TEAM, TEAM_TITLE } from "../../../deskStructure/constants";
+import { i18n } from "../../helpers/documentTranslation";
 
 export default {
   title: TEAM_TITLE,

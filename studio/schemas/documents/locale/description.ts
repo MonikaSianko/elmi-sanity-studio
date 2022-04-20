@@ -1,8 +1,12 @@
-import { i18n } from "../documentTranslation";
+import {
+  DESCRIPTION,
+  DESCRIPTION_TITLE,
+} from "../../../deskStructure/constants";
+import { i18n } from "../../helpers/documentTranslation";
 
 export default {
-  title: "Description",
-  name: "description",
+  title: DESCRIPTION_TITLE,
+  name: DESCRIPTION,
   type: "document",
   i18n,
   fields: [
@@ -14,30 +18,15 @@ export default {
         "This field serves organizational purpose, this value will not be displayed on the website.",
     },
     {
-      title: "Title",
-      type: "string",
-      name: "title",
-    },
-    {
-      title: "Subtitle",
-      type: "string",
-      name: "subtitle",
-    },
-    {
-      title: "Text",
-      type: "text",
-      name: "text",
+      title: "Description",
+      name: "simpleDescription",
+      type: "simpleDescription",
     },
     {
       title: "CTA button",
       type: "array",
       name: "ctaButton",
       of: [{ type: "cta" }],
-    },
-    {
-      title: "Image",
-      type: "captionImage",
-      name: "image",
     },
   ],
 };

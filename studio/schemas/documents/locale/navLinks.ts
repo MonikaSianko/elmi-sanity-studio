@@ -1,8 +1,9 @@
-import { i18n } from "../documentTranslation";
+import { NAVLINKS, NAVLINKS_TITLE } from "../../../deskStructure/constants";
+import { i18n } from "../../helpers/documentTranslation";
 
 export default {
-  title: "NAVIGATION LINKS",
-  name: "navLinks",
+  title: NAVLINKS_TITLE,
+  name: NAVLINKS,
   type: "document",
   i18n,
   fields: [

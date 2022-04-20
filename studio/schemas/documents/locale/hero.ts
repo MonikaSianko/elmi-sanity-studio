@@ -1,8 +1,9 @@
-import { i18n } from "../documentTranslation";
+import { HERO, HERO_TITLE } from "../../../deskStructure/constants";
+import { i18n } from "../../helpers/documentTranslation";
 
 export default {
-  title: "Hero",
-  name: "hero",
+  title: HERO_TITLE,
+  name: HERO,
   type: "document",
   i18n,
   fields: [
