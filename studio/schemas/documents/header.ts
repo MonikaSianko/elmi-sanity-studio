@@ -1,4 +1,4 @@
-import { ARRAY, DOCUMENT, STRING } from "../utils/schemaTypes";
+import { ARRAY, DOCUMENT, IMAGE, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "HEADER",
@@ -21,7 +21,7 @@ export default {
     {
       title: "Logo",
       type: "captionImage",
-      name: "image",
+      name: IMAGE,
     },
   ],
 };

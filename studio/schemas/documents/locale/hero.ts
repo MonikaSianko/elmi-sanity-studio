@@ -1,6 +1,6 @@
 import { HERO, HERO_TITLE } from "../../../deskStructure/constants";
 import { i18n } from "../../helpers/documentTranslation";
-import { ARRAY, DOCUMENT, STRING } from "../../utils/schemaTypes";
+import { ARRAY, DOCUMENT, IMAGE, STRING } from "../../utils/schemaTypes";
 
 export default {
   title: HERO_TITLE,
@@ -32,9 +32,9 @@ export default {
       of: [{ type: "cta" }],
     },
     {
-      title: "Image",
+      title: IMAGE,
       type: "captionImage",
-      name: "image",
+      name: IMAGE,
     },
   ],
 };

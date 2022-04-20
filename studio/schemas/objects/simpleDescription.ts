@@ -1,4 +1,4 @@
-import { STRING } from "../utils/schemaTypes";
+import { IMAGE, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "simpleDescription",
@@ -21,9 +21,9 @@ export default {
       name: "text",
     },
     {
-      title: "Image",
+      title: IMAGE,
       type: "captionImage",
-      name: "image",
+      name: IMAGE,
     },
   ],
 };

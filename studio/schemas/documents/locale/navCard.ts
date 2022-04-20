@@ -1,6 +1,6 @@
 import { NAVCARD, NAVCARD_TITLE } from "../../../deskStructure/constants";
 import { i18n } from "../../helpers/documentTranslation";
-import { DOCUMENT, STRING } from "../../utils/schemaTypes";
+import { DOCUMENT, IMAGE, STRING } from "../../utils/schemaTypes";
 
 export default {
   title: NAVCARD_TITLE,
@@ -29,7 +29,7 @@ export default {
     {
       title: "Icon",
       name: "icon",
-      type: "image",
+      type: IMAGE,
       description: "Can be left empty. If only button should be displayed.",
     },
   ],

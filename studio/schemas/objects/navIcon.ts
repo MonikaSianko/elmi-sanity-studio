@@ -1,4 +1,4 @@
-import { STRING } from "../utils/schemaTypes";
+import { IMAGE, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "Navigation button",
@@ -12,7 +12,7 @@ export default {
     {
       title: "Icon",
       name: "icon",
-      type: "image",
+      type: IMAGE,
     },
   ],
 };
