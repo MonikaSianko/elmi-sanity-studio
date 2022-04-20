@@ -28,7 +28,7 @@ export default {
     },
     {
       title: "Icon",
-      name: "icon",
+      name: "navCardIcon",
       type: IMAGE,
       description: "Can be left empty. If only button should be displayed.",
     },

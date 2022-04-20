@@ -1,4 +1,4 @@
-import { IMAGE, STRING } from "../utils/schemaTypes";
+import { CAPTION_IMAGE, IMAGE, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "Slide",
@@ -12,9 +12,9 @@ export default {
       desciption: "If left empty, slide will consist only of image",
     },
     {
-      title: IMAGE,
-      name: IMAGE,
-      type: "captionImage",
+      title: "Slide Image",
+      name: "slideImage",
+      type: CAPTION_IMAGE,
     },
   ],
 };

@@ -6,12 +6,12 @@ export default {
   fields: [
     {
       title: "Path",
-      name: "path",
+      name: "navBtnPath",
       type: STRING,
     },
     {
       title: "Icon",
-      name: "icon",
+      name: "navBtnIcon",
       type: IMAGE,
     },
   ],

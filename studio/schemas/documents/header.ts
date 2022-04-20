@@ -1,4 +1,5 @@
-import { ARRAY, DOCUMENT, IMAGE, STRING } from "../utils/schemaTypes";
+import { NAVLINKS } from "../../deskStructure/constants";
+import { ARRAY, CAPTION_IMAGE, DOCUMENT, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "HEADER",
@@ -16,12 +17,12 @@ export default {
       name: "navLinks",
       title: "Navigation links",
       type: ARRAY,
-      of: [{ type: "reference", to: [{ type: "navLinks" }] }],
+      of: [{ type: "reference", to: [{ type: NAVLINKS }] }],
     },
     {
       title: "Logo",
-      type: "captionImage",
-      name: IMAGE,
+      type: CAPTION_IMAGE,
+      name: "logo",
     },
   ],
 };

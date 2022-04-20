@@ -12,7 +12,7 @@ export default {
     },
     {
       title: "Icon",
-      name: "icon",
+      name: "detailsIcon",
       type: IMAGE,
     },
   ],
