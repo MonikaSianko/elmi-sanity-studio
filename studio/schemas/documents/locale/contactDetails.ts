@@ -3,7 +3,7 @@ import {
   CONTACT_DETAILS,
   CONTACT_DETAILS_TITLE,
 } from "../../../deskStructure/constants";
-import { STRING } from "../../utils/schemaTypes";
+import { ARRAY, STRING } from "../../utils/schemaTypes";
 
 export default {
   title: CONTACT_DETAILS_TITLE,
@@ -26,7 +26,7 @@ export default {
     {
       title: "Contact By",
       name: "contactBy",
-      type: "array",
+      type: ARRAY,
       of: [{ type: "link" }],
     },
     {

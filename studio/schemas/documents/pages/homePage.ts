@@ -5,6 +5,7 @@ import {
   HOME_PAGE_TITLE,
 } from "../../../deskStructure/constants";
 import { homeSectionTypes } from "../../helpers/sectionTypes";
+import { ARRAY } from "../../utils/schemaTypes";
 
 export default {
   title: HOME_PAGE_TITLE,
@@ -14,7 +15,7 @@ export default {
     {
       title: "Page sections",
       name: "homeSections",
-      type: "array",
+      type: ARRAY,
       of: [{ type: "reference", to: homeSectionTypes.map((el) => el) }],
     },
   ],

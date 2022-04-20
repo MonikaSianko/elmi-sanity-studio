@@ -1,4 +1,4 @@
-import { STRING } from "../utils/schemaTypes";
+import { ARRAY, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "HEADER",
@@ -15,7 +15,7 @@ export default {
     {
       name: "navLinks",
       title: "Navigation links",
-      type: "array",
+      type: ARRAY,
       of: [{ type: "reference", to: [{ type: "navLinks" }] }],
     },
     {

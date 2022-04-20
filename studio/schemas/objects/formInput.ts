@@ -3,7 +3,7 @@ import {
   inputTypes,
   validationSettingTypes,
 } from "../helpers/lists";
-import { STRING } from "../utils/schemaTypes";
+import { ARRAY, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "Form input",
@@ -23,14 +23,14 @@ export default {
     {
       title: "Standard error messages",
       name: "errorMessages",
-      type: "array",
+      type: ARRAY,
       of: [{ type: "error" }],
       validation: (Rule) => Rule.max(errorTypes.length),
     },
     {
       title: "Value length validation",
       name: "validation",
-      type: "array",
+      type: ARRAY,
       of: [{ type: "validationSettings" }],
       validation: (Rule) => Rule.max(validationSettingTypes.length),
     },

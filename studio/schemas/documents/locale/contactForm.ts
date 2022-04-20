@@ -3,6 +3,7 @@ import {
   CONTACT_FORM,
   CONTACT_FORM_TITLE,
 } from "../../../deskStructure/constants";
+import { ARRAY } from "../../utils/schemaTypes";
 
 export default {
   title: CONTACT_FORM_TITLE,
@@ -13,7 +14,7 @@ export default {
     {
       title: "Inputs",
       name: "inputs",
-      type: "array",
+      type: ARRAY,
       of: [{ type: "formInput" }],
     },
   ],

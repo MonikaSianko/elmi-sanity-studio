@@ -1,5 +1,5 @@
 import { SLIDER_TITLE, SLIDER } from "../../deskStructure/constants";
-import { STRING } from "../utils/schemaTypes";
+import { ARRAY, STRING } from "../utils/schemaTypes";
 
 export default {
   title: SLIDER_TITLE,
@@ -16,7 +16,7 @@ export default {
     {
       title: "Slides",
       name: "slides",
-      type: "array",
+      type: ARRAY,
       of: [{ type: "slide" }],
     },
   ],

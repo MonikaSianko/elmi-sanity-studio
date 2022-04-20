@@ -1,4 +1,5 @@
 import { SERVICES, SERVICES_TITLE } from "../../../deskStructure/constants";
+import { ARRAY } from "../../utils/schemaTypes";
 
 export default {
   title: SERVICES_TITLE,
@@ -19,7 +20,7 @@ export default {
     {
       title: "Details",
       name: "details",
-      type: "array",
+      type: ARRAY,
       of: [{ type: "details" }],
     },
   ],

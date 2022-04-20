@@ -3,7 +3,7 @@ import {
   DESCRIPTION_TITLE,
 } from "../../../deskStructure/constants";
 import { i18n } from "../../helpers/documentTranslation";
-import { STRING } from "../../utils/schemaTypes";
+import { ARRAY, STRING } from "../../utils/schemaTypes";
 
 export default {
   title: DESCRIPTION_TITLE,
@@ -25,7 +25,7 @@ export default {
     },
     {
       title: "CTA button",
-      type: "array",
+      type: ARRAY,
       name: "ctaButton",
       of: [{ type: "cta" }],
     },
