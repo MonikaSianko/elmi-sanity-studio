@@ -1,8 +1,9 @@
-import { ARRAY, CAPTION_IMAGE, DOCUMENT, STRING } from "../utils/schemaTypes";
+import { FOOTER, FOOTER_TITLE } from "../../deskStructure/constants";
+import { ARRAY, DOCUMENT, REFERENCE, STRING } from "../utils/schemaTypes";
 
 export default {
-  title: "FOOTER",
-  name: "footer",
+  title: FOOTER_TITLE,
+  name: FOOTER,
   type: DOCUMENT,
   fields: [
     {
@@ -16,11 +17,11 @@ export default {
       name: "navLinks",
       title: "Navigation links",
       type: ARRAY,
-      of: [{ type: "reference", to: [{ type: "navLinks" }] }],
+      of: [{ type: REFERENCE, to: [{ type: "navLinks" }] }],
     },
     {
       title: "Logo",
-      type: CAPTION_IMAGE,
+      type: "captionImage",
       name: "logo",
     },
   ],

@@ -1,9 +1,9 @@
-import { CAPTION_IMAGE, IMAGE, STRING } from "../utils/schemaTypes";
+import { IMAGE, OBJECT, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "Slide",
   name: "slide",
-  type: "object",
+  type: OBJECT,
   fields: [
     {
       title: "Title",
@@ -14,7 +14,7 @@ export default {
     {
       title: "Slide Image",
       name: "slideImage",
-      type: CAPTION_IMAGE,
+      type: "captionImage",
     },
   ],
 };

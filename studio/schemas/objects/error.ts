@@ -1,10 +1,10 @@
 import { errorTypes } from "../helpers/lists";
-import { STRING } from "../utils/schemaTypes";
+import { OBJECT, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "Error",
   name: "error",
-  type: "object",
+  type: OBJECT,
   fields: [
     {
       title: "Error type",

@@ -1,10 +1,10 @@
 import { validationSettingTypes } from "../helpers/lists";
-import { STRING } from "../utils/schemaTypes";
+import { OBJECT, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "Validation settings",
   name: "validationSettings",
-  type: "object",
+  type: OBJECT,
   fields: [
     {
       title: "Validation setting",

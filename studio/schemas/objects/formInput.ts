@@ -3,12 +3,12 @@ import {
   inputTypes,
   validationSettingTypes,
 } from "../helpers/lists";
-import { ARRAY, STRING } from "../utils/schemaTypes";
+import { ARRAY, OBJECT, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "Form input",
   name: "formInput",
-  type: "object",
+  type: OBJECT,
   fields: [
     { title: "Input label", name: "inputLabel", type: STRING },
     { title: "Input placeholder", name: "inputPlaceholder", type: STRING },

@@ -1,9 +1,9 @@
-import { CAPTION_IMAGE, STRING } from "../utils/schemaTypes";
+import { OBJECT, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "CTA",
   name: "cta",
-  type: "object",
+  type: OBJECT,
   fields: [
     {
       title: "Text",
@@ -17,7 +17,7 @@ export default {
     },
     {
       title: "Icon",
-      type: CAPTION_IMAGE,
+      type: "captionImage",
       name: "ctaIcon",
     },
   ],

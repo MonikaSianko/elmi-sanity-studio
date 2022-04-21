@@ -1,9 +1,9 @@
-import { NAVLINKS } from "../../deskStructure/constants";
-import { ARRAY, CAPTION_IMAGE, DOCUMENT, STRING } from "../utils/schemaTypes";
+import { HEADER, HEADER_TITLE, NAVLINKS } from "../../deskStructure/constants";
+import { ARRAY, DOCUMENT, REFERENCE, STRING } from "../utils/schemaTypes";
 
 export default {
-  title: "HEADER",
-  name: "header",
+  title: HEADER_TITLE,
+  name: HEADER,
   type: DOCUMENT,
   fields: [
     {
@@ -17,11 +17,11 @@ export default {
       name: "navLinks",
       title: "Navigation links",
       type: ARRAY,
-      of: [{ type: "reference", to: [{ type: NAVLINKS }] }],
+      of: [{ type: REFERENCE, to: [{ type: NAVLINKS }] }],
     },
     {
       title: "Logo",
-      type: CAPTION_IMAGE,
+      type: "captionImage",
       name: "logo",
     },
   ],

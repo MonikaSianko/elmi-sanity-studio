@@ -1,9 +1,9 @@
-import { IMAGE, STRING } from "../utils/schemaTypes";
+import { IMAGE, OBJECT, STRING } from "../utils/schemaTypes";
 
 export default {
   title: "Details",
   name: "details",
-  type: "object",
+  type: OBJECT,
   fields: [
     {
       title: "Text",

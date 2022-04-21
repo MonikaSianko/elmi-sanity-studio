@@ -1,10 +1,11 @@
+import { OBJECT } from "../utils/schemaTypes";
 import { languages, baseLanguage } from "./languages";
 
 // This is the basis for all fields that should have translations.
 // Its used to fill out more complete field definitions in
 // 'translateDocs' below
 const languageField = {
-  type: "object",
+  type: OBJECT,
   fieldsets: [
     {
       title: "Translations",
