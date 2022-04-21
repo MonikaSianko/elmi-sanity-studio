@@ -21,6 +21,11 @@ import {
   CONTACT_DETAILS,
   CONTACT_FORM,
   HOME_PAGE,
+  PRODUCTS_PAGE,
+  SERVICES_PAGE,
+  ABOUT_PAGE,
+  CONTACT_PAGE,
+  STYLES,
 } from "./constants";
 import {
   heroEditorItem,
@@ -36,6 +41,10 @@ import {
   contactDetailsListItem,
   contactFormListItem,
   homePageListItem,
+  productsPageListItem,
+  servicesPageListItem,
+  aboutPageListItem,
+  contactPageListItem,
 } from "./listItems";
 
 const schemaDocumentTranslation = [
@@ -67,7 +76,13 @@ const boxes = [
   { id: CONTACT_FORM, item: contactFormListItem },
 ];
 
-const pages = [{ id: HOME_PAGE, item: homePageListItem }];
+const pages = [
+  { id: HOME_PAGE, item: homePageListItem },
+  { id: PRODUCTS_PAGE, item: productsPageListItem },
+  { id: SERVICES_PAGE, item: servicesPageListItem },
+  { id: ABOUT_PAGE, item: aboutPageListItem },
+  { id: CONTACT_PAGE, item: contactPageListItem },
+];
 
 const propsSchemaType = (schemaType: string[], propsSchemaType): boolean => {
   return schemaType.includes(propsSchemaType);
@@ -91,8 +106,6 @@ interface IItems {
   item: ListItemBuilder;
 }
 
-/// FIX THE SORTING
-// const boxesSorted = boxes.sort((a, b) => a.spec.id.localeCompare(b.spec.id);
 const sortedItems = (arr: IItems[]): ListItemBuilder[] => {
   const sortedById = arr.sort((a, b) => a.id.localeCompare(b.id));
   return sortedById.map((el) => el.item);
@@ -113,4 +126,5 @@ export default () =>
         .title("Pages")
         .icon(DocumentIcon)
         .child(S.list().id("allPages").title("All pages").items(pagesSorted)),
+      S.documentTypeListItem(STYLES),
     ]);

@@ -1,24 +1,25 @@
 import {
-  HEADER,
-  HERO,
-  HOME_PAGE,
-  HOME_PAGE_TITLE,
+  CONTACT_PAGE,
+  CONTACT_PAGE_TITLE,
 } from "../../../deskStructure/constants";
-import { homeSectionTypes } from "../../helpers/sectionTypes";
+import {
+  contactSectionTypes,
+  servicesSectionTypes,
+} from "../../helpers/sectionTypes";
 import { ARRAY, DOCUMENT, REFERENCE } from "../../utils/schemaTypes";
 
 export default {
-  title: HOME_PAGE_TITLE,
-  name: HOME_PAGE,
+  title: CONTACT_PAGE_TITLE,
+  name: CONTACT_PAGE,
   type: DOCUMENT,
   fields: [
     {
       title: "Page sections",
-      name: "homeSections",
-      type: ARRAY,
+      name: "productsSections",
       description:
         "Choose sections that you would like to display and move them (draq'n'drop) into desired order.",
-      of: [{ type: REFERENCE, to: homeSectionTypes.map((el) => el) }],
+      type: ARRAY,
+      of: [{ type: REFERENCE, to: contactSectionTypes.map((el) => el) }],
     },
   ],
 };

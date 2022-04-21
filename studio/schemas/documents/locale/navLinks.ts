@@ -17,7 +17,7 @@ export default {
     },
     {
       title: "Navigation Link",
-      type: "link",
+      type: "cta",
       name: "navLink",
     },
   ],

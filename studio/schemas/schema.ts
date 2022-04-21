@@ -1,16 +1,18 @@
 import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
+import "all:part:@sanity/base/schema-type";
 import { translateFields } from "./helpers/fieldTranslation";
 
 // OBJECTS
 import cta from "./objects/CTA";
 import captionImage from "./objects/captionImage";
 import slide from "./objects/slide";
-import link from "./objects/link";
 import person from "./objects/person";
 import simpleDescription from "./objects/simpleDescription";
 import details from "./objects/details";
 import error from "./objects/error";
+import formInput from "./objects/formInput";
+import validationSettings from "./objects/validationSettings";
 // DOCUMENTS LOCALE
 import hero from "./documents/locale/hero";
 import team from "./documents/locale/team";
@@ -25,9 +27,13 @@ import contactForm from "./documents/locale/contactForm";
 import slider from "./documents/slider";
 import footer from "./documents/footer";
 import header from "./documents/header";
-import validationSettings from "./objects/validationSettings";
-import formInput from "./objects/formInput";
+// PAGES
 import homePage from "./documents/pages/homePage";
+import aboutPage from "./documents/pages/aboutPage";
+import productsPage from "./documents/pages/productsPage.";
+import servicesPage from "./documents/pages/servicesPage";
+import contactPage from "./documents/pages/contactPage";
+import styles from "./documents/styles";
 
 export default createSchema({
   name: "default",
@@ -55,7 +61,6 @@ export default createSchema({
     cta,
     captionImage,
     person,
-    link,
     slide,
     simpleDescription,
     details,
@@ -65,6 +70,13 @@ export default createSchema({
 
     //pages
     homePage,
+    productsPage,
+    servicesPage,
+    contactPage,
+    aboutPage,
+
+    //other
+    styles,
   ]),
   // Include documents with field translation support.
   // This changes their structure, transforming

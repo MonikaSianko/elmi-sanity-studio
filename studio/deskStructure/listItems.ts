@@ -28,6 +28,14 @@ import {
   FOOTER_TITLE,
   HOME_PAGE_TITLE,
   HOME_PAGE,
+  PRODUCTS_PAGE_TITLE,
+  PRODUCTS_PAGE,
+  SERVICES_PAGE_TITLE,
+  SERVICES_PAGE,
+  ABOUT_PAGE_TITLE,
+  ABOUT_PAGE,
+  CONTACT_PAGE_TITLE,
+  CONTACT_PAGE,
 } from "./constants";
 
 const createListItem = (title: string, id: string): ListItemBuilder => {
@@ -80,3 +88,16 @@ export const footerListItem = createDocTypeListItem(FOOTER_TITLE, FOOTER);
 
 // PAGES
 export const homePageListItem = createListItem(HOME_PAGE_TITLE, HOME_PAGE);
+export const productsPageListItem = createListItem(
+  PRODUCTS_PAGE_TITLE,
+  PRODUCTS_PAGE
+);
+export const servicesPageListItem = createListItem(
+  SERVICES_PAGE_TITLE,
+  SERVICES_PAGE
+);
+export const aboutPageListItem = createListItem(ABOUT_PAGE_TITLE, ABOUT_PAGE);
+export const contactPageListItem = createListItem(
+  CONTACT_PAGE_TITLE,
+  CONTACT_PAGE
+);

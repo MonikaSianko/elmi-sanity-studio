@@ -26,3 +26,14 @@ export const FOOTER_TITLE = "FOOTER";
 // PAGES
 export const HOME_PAGE = "homePage";
 export const HOME_PAGE_TITLE = "HOME PAGE";
+export const PRODUCTS_PAGE = "productsPage";
+export const PRODUCTS_PAGE_TITLE = "PRODUCTS PAGE";
+export const SERVICES_PAGE = "servicesPage";
+export const SERVICES_PAGE_TITLE = "SERVICES PAGE";
+export const CONTACT_PAGE = "contactPage";
+export const CONTACT_PAGE_TITLE = "CONTACT PAGE";
+export const ABOUT_PAGE = "aboutPage";
+export const ABOUT_PAGE_TITLE = "ABOUT PAGE";
+// OTHER
+export const STYLES = "styles";
+export const STYLES_TITLE = "STYLES";

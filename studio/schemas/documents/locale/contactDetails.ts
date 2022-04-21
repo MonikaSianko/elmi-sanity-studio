@@ -19,15 +19,15 @@ export default {
         "This field serves organizational purpose, this value will not be displayed on the website.",
     },
     {
-      title: "Description",
-      name: "description",
-      type: "simpleDescription",
+      name: "contactCta",
+      title: "Contact CTA",
+      type: "cta",
     },
     {
       title: "Contact By",
       name: "contactBy",
       type: ARRAY,
-      of: [{ type: "link" }],
+      of: [{ type: "cta" }],
     },
     {
       title: "Longtitute",
