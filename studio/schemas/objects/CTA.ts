@@ -14,6 +14,7 @@ export default {
       title: "Path",
       type: STRING,
       name: "path",
+      description: "Path should not be translated",
     },
     {
       title: "Icon",

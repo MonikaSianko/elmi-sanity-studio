@@ -26,6 +26,7 @@ import {
   ABOUT_PAGE,
   CONTACT_PAGE,
   STYLES,
+  CARDS_NAVIGATION,
 } from "./constants";
 import {
   heroEditorItem,
@@ -45,12 +46,12 @@ import {
   servicesPageListItem,
   aboutPageListItem,
   contactPageListItem,
+  cardsNavListItem,
 } from "./listItems";
 
 const schemaDocumentTranslation = [
   HERO,
   DESCRIPTION,
-  FOOTER,
   TEAM,
   NAVLINKS,
   SLIDER,
@@ -74,6 +75,7 @@ const boxes = [
   { id: SERVICES, item: servicesListItem },
   { id: CONTACT_DETAILS, item: contactDetailsListItem },
   { id: CONTACT_FORM, item: contactFormListItem },
+  { id: CARDS_NAVIGATION, item: cardsNavListItem },
 ];
 
 const pages = [
@@ -126,5 +128,12 @@ export default () =>
         .title("Pages")
         .icon(DocumentIcon)
         .child(S.list().id("allPages").title("All pages").items(pagesSorted)),
-      S.documentTypeListItem(STYLES),
+      S.listItem()
+        .title("Styles")
+        .child(S.editor().schemaType(STYLES).documentId(STYLES)),
+
+      // List out the rest of the document types, but filter out the config type
+      // ...S.documentTypeListItems().filter(
+      //   (listItem) => ![STYLES].includes(listItem.getId())
+      // ),
     ]);

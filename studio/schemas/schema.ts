@@ -34,6 +34,7 @@ import productsPage from "./documents/pages/productsPage.";
 import servicesPage from "./documents/pages/servicesPage";
 import contactPage from "./documents/pages/contactPage";
 import styles from "./documents/styles";
+import cardsNav from "./documents/cardsNav";
 
 export default createSchema({
   name: "default",
@@ -56,6 +57,7 @@ export default createSchema({
     // reference docs
     header,
     footer,
+    cardsNav,
 
     // objects
     cta,

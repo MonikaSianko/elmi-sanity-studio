@@ -23,6 +23,8 @@ export const HEADER = "header";
 export const HEADER_TITLE = "HEADER";
 export const FOOTER = "footer";
 export const FOOTER_TITLE = "FOOTER";
+export const CARDS_NAVIGATION = "cardsNav";
+export const CARDS_NAVIGATION_TITLE = "CARDS NAVIGATION";
 // PAGES
 export const HOME_PAGE = "homePage";
 export const HOME_PAGE_TITLE = "HOME PAGE";

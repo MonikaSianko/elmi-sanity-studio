@@ -36,6 +36,8 @@ import {
   ABOUT_PAGE,
   CONTACT_PAGE_TITLE,
   CONTACT_PAGE,
+  CARDS_NAVIGATION_TITLE,
+  CARDS_NAVIGATION,
 } from "./constants";
 
 const createListItem = (title: string, id: string): ListItemBuilder => {
@@ -85,6 +87,7 @@ export const contactFormListItem = createListItem(
 
 export const headerListItem = createDocTypeListItem(HEADER_TITLE, HEADER);
 export const footerListItem = createDocTypeListItem(FOOTER_TITLE, FOOTER);
+export const cardsNavListItem = createDocTypeListItem(CARDS_NAVIGATION_TITLE, CARDS_NAVIGATION);
 
 // PAGES
 export const homePageListItem = createListItem(HOME_PAGE_TITLE, HOME_PAGE);

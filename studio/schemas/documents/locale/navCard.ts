@@ -1,6 +1,6 @@
 import { NAVCARD, NAVCARD_TITLE } from "../../../deskStructure/constants";
 import { i18n } from "../../helpers/documentTranslation";
-import { DOCUMENT, IMAGE, STRING } from "../../utils/schemaTypes";
+import { DOCUMENT, STRING } from "../../utils/schemaTypes";
 
 export default {
   title: NAVCARD_TITLE,
@@ -19,6 +19,7 @@ export default {
       title: "Path",
       type: STRING,
       name: "path",
+      description: "Path should not be translated",
     },
     {
       title: "Button text",
@@ -29,8 +30,8 @@ export default {
     {
       title: "Icon",
       name: "navCardIcon",
-      type: IMAGE,
-      description: "Can be left empty. If only button should be displayed.",
+      type: "captionImage",
+      description: "SVG file. Icon should be in target color",
     },
   ],
 };

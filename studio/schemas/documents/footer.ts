@@ -20,6 +20,12 @@ export default {
       of: [{ type: REFERENCE, to: [{ type: "navLinks" }] }],
     },
     {
+      name: "withIcon",
+      title: "Links with icon",
+      type: "boolean",
+      description: "Choose if links should have icons",
+    },
+    {
       title: "Logo",
       type: "captionImage",
       name: "logo",

@@ -1,15 +1,20 @@
-import { IMAGE, STRING } from "../utils/schemaTypes";
+import { IMAGE, OBJECT, STRING } from "../utils/schemaTypes";
 
 export default {
   title: IMAGE,
   name: "captionImage",
-  type: IMAGE,
+  type: OBJECT,
   description: "After upload click edit and add the caption.",
   fields: [
     {
-      name: "caption",
+      name: "image",
+      type: IMAGE,
+      title: "Image",
+    },
+    {
+      name: "alt",
       type: STRING,
-      title: "Caption",
+      title: "Image Caption",
       description:
         "Short description of the image that will be shown if the image does not load.",
     },
