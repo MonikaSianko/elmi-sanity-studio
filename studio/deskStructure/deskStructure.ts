@@ -62,7 +62,7 @@ const schemaDocumentTranslation = [
   CONTACT_FORM,
 ];
 
-const boxes = [
+const modules = [
   { id: HERO, item: heroEditorItem },
   { id: DESCRIPTION, item: descriptionListItem },
   { id: NAVLINKS, item: navLinksListItem },
@@ -113,7 +113,7 @@ const sortedItems = (arr: IItems[]): ListItemBuilder[] => {
   return sortedById.map((el) => el.item);
 };
 
-const boxesSorted = sortedItems(boxes);
+const modulesSorted = sortedItems(modules);
 const pagesSorted = sortedItems(pages);
 
 export default () =>
@@ -121,9 +121,11 @@ export default () =>
     .title("Content")
     .items([
       S.listItem()
-        .title("Boxes")
+        .title("Modules")
         .icon(DocumentIcon)
-        .child(S.list().id("allBoxes").title("All boxes").items(boxesSorted)),
+        .child(
+          S.list().id("allModules").title("All Modules").items(modulesSorted)
+        ),
       S.listItem()
         .title("Pages")
         .icon(DocumentIcon)

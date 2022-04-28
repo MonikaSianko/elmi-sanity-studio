@@ -83,11 +83,14 @@ export const contactFormListItem = createListItem(
   CONTACT_FORM
 );
 
-// REFERANCE_BOXES
+// REFERANCE_MODULES
 
 export const headerListItem = createDocTypeListItem(HEADER_TITLE, HEADER);
 export const footerListItem = createDocTypeListItem(FOOTER_TITLE, FOOTER);
-export const cardsNavListItem = createDocTypeListItem(CARDS_NAVIGATION_TITLE, CARDS_NAVIGATION);
+export const cardsNavListItem = createDocTypeListItem(
+  CARDS_NAVIGATION_TITLE,
+  CARDS_NAVIGATION
+);
 
 // PAGES
 export const homePageListItem = createListItem(HOME_PAGE_TITLE, HOME_PAGE);
